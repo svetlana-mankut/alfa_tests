@@ -1,0 +1,20 @@
+apply plugin: 'java'
+project.apply plugin: 'eclipse'
+repositories {
+    mavenCentral()
+}
+
+task tests(type: Test){
+}
+    	test{
+    	include 'polkota/src/tests/**'
+    	
+    	}
+    	defaultTasks = ['clean', 'install']
+    	
+dependencies {
+    compile 'org.testng:testng:6.9.10'
+compile 'junit:junit:4.+'
+compile 'org.seleniumhq.webdriver:webdriver-selenium:0.9.+'
+compile 'org.seleniumhq.webdriver:webdriver-chrome:0.9.+'
+}
